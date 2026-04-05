@@ -36,6 +36,7 @@ public class Main {
             byID.printShortInfo();
         } else {
             System.out.println("Не найден");
+
         }
     }
 }
