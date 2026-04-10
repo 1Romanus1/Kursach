@@ -1,46 +1,46 @@
 import java.util.Objects;
 
 public class Employee {
-    private String fIO;
+    private String fio;
     private int department;
     private int salary;
-    private int iD;
+    private int id;
 
     private static int counter = 1;
 
     public Employee(String fIO, int department, int salary) {
-        this.fIO = fIO;
+        this.fio = fIO;
         this.department = department;
         this.salary = salary;
-        this.iD = counter++;
+        this.id = counter++;
     }
 
     public String getFIO() {
-        return fIO;
+        return fio;
     }
+
     public int getDepartment() {
         return department;
     }
+
     public void setDepartment(int department) {
         this.department = department;
     }
+
     public int getID() {
-        return iD;
+        return id;
     }
+
     public int getSalary() {
         return salary;
     }
+
     public void setSalary(int salary) {
         this.salary = salary;
     }
 
-
-
-
-
-
     public void printShortInfo() {
-        System.out.println("FIO: " + fIO + ", salary: " + salary);
+        System.out.println("ФИО: " + fio + ", зарплата: " + salary);
     }
 
     @Override
@@ -48,22 +48,22 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return iD == employee.iD;
+        return id == employee.id;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(iD);
+        return Integer.hashCode(id);
     }
 
-    // Полная информация
+
     @Override
     public String toString() {
         return "Employee{" +
-                "fio='" + fIO + '\'' +
-                ", department=" + department +
-                ", salary=" + salary +
-                ", id=" + iD +
+                "ФИО =" + fio + '\'' +
+                ", отдел =" + department +
+                ", зарплата =" + salary +
+                ", id=" + id +
                 '}';
     }
 }

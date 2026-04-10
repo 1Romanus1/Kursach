@@ -11,12 +11,6 @@ public class EmployeeBook {
         return false;
     }
 
-
-
-
-
-
-
     public void printAllEmployees() {
         for (Employee e : employees) {
             if (e != null) {
@@ -24,7 +18,6 @@ public class EmployeeBook {
             }
         }
     }
-
 
     public double getAverageSalary() {
         int sum = 0;
@@ -42,7 +35,7 @@ public class EmployeeBook {
         return (double) sum / count;
     }
 
-    public static double PROPORTIONAL(double tax) {
+    public static double Proportional(double tax) {
         if (tax <= 150) {
             tax = tax * 1.13;
         } else if (tax <= 350) {
@@ -61,12 +54,13 @@ public class EmployeeBook {
             if (e.getDepartment() == department) {
                 continue;
             }
-                int currentSalary = e.getSalary();
-                int newSalary = (int) (currentSalary * (1 + precent / 100));
-                e.setSalary(newSalary);
+            int currentSalary = e.getSalary();
+            int newSalary = (int) (currentSalary * (1 + precent / 100));
+            e.setSalary(newSalary);
 
         }
     }
+
     public void findEmployee(int department, int salary) {
         for (int i = 0; i < employees.length; i++) {
             if (employees[i] == null) {
@@ -80,6 +74,7 @@ public class EmployeeBook {
             }
         }
     }
+
     public void findEmployeesBySalary(int wage, int employeeNumber) {
         int i = 0;
         int cout = 0;
@@ -98,6 +93,7 @@ public class EmployeeBook {
             i++;
         }
     }
+
     public boolean containsEmployee(Employee employee) {
         for (Employee e : employees) {
             if (e == null) {
@@ -109,8 +105,9 @@ public class EmployeeBook {
         }
         return false;
     }
+
     public Employee getEmployeeByID(int iD) {
-        for(Employee e : employees) {
+        for (Employee e : employees) {
             if (e == null) {
                 break;
             }
