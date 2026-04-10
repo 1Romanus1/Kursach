@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         EmployeeBook book = new EmployeeBook();
 
-        for (int i = 0; i < 11; i++ ) {
+        for (int i = 0; i < 11; i++) {
 
             Employee emp = new Employee(" Сотрудник " + i, i % 5 + 1, 200 + i * 10);
             boolean result = book.addEmployee(emp);
